@@ -28,7 +28,6 @@ class Solution {
         
         foreach ($nums as $num) {
             for ($j = $sum; $j >= $num; $j--) {
-                echo "<pre>"; print_r($dp); echo "</pre>";
                 $dp[$j] += $dp[$j - $num];
             }
         }
@@ -39,7 +38,6 @@ class Solution {
 
 $solution = new Solution();
 
-$res = $solution->findTargetSumWays([1],1);
+$res = $solution->findTargetSumWays([1,1,1,1,1],3);
 
-echo "<pre>"; print_r($res); exit;
 ?>
